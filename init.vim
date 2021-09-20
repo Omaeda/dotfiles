@@ -49,7 +49,12 @@ nnoremap <leader>j :bprevious<CR>
 nnoremap <leader>q :bdelete<CR>
 
 
-
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
 
 
 
