@@ -117,9 +117,9 @@ set encoding=utf-8
 set cursorline " Resalta la línea actual
 set spelllang=en,es " Corregir palabras usando diccionarios en inglés y español
 set smartcase
-"set termguicolors  " Activa true colors en la terminal
+set termguicolors  " Activa true colors en la terminal
 set background=dark  " Fondo del tema: light o dark
-colorscheme default " Nombre del tema
+colorscheme gruvbox " Nombre del tema
 let g:mapleader = ' '  " Definir espacio como la tecla líder
 
 nnoremap <leader>s :w<CR>  " Guardar con <líder> + s
@@ -156,3 +156,17 @@ ino ( ()<left>
 ino [ []<left>
 ino { {}<left>
 ino {<CR> {<CR>}<ESC>O
+
+
+" Use a line cursor within insert mode and a block cursor everywhere else.
+"
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
